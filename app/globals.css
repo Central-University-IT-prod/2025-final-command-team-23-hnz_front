@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: ROSEMUZ font;
+  src: url(/font/TTNormsPro-Regular.woff) format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ROSEMUZ font;
+  src: url(/font/TTNormsPro-Medium.woff) format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ROSEMUZ font;
+  src: url(/font/TTNormsPro-Semibold.woff) format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ROSEMUZ font;
+  src: url(/font/TTNormsPro-Bold.woff) format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ROSEMUZ font;
+  src: url(/font/TTNormsPro-Extrabold.woff) format("woff");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap
+}
+
+
+:root,
+body,
+div,
+html {
+  font-family: ROSEMUZ font, sans-serif !important
+}
+
+*,
+::before,
+::after {
+  border-color: var(--chakra-colors-chakra-border-color);
+  overflow-wrap: break-word;
+}
+
+:root,
+body,
+html {
+  height: 100%;
+  --removed-body-scroll-bar-size: 0px !important;
+  background-color: #f6f7f8;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  font-feature-settings: 'kern';
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+
+.header_blur {
+  background: rgba(0, 0, 0, 0);
+  ;
+  backdrop-filter: blur(10px);
+}
+
+.bg-blue {
+  background-color: #00a6e5;
+  ;
+  color: white;
+}
+.bg-default-100{
+  background-color: white;
+  border-radius: 6px;
+}
+.height-stores {
+  height: 180px;
+}
+
+.theme {
+  transition: 1s all ease;
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+  border-radius: 100%;
+}
+
+[data-theme=dark] ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 26px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+._next {
+  height: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.z-f {
+  position: fixed;
+  z-index: 5500;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  bottom: env(safe-area-inset-bottom, 0px);
+  right: env(safe-area-inset-right, 0px);
+  left: env(safe-area-inset-left, 0px);
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,11 @@
+FROM node:20.5.0
+ 
+ENV PAYMENT_LOGIN=${PAYMENT_LOGIN}
+ENV PAYMENT_PASSWORD=${PAYMENT_PASSWORD}
+
+WORKDIR /app
+COPY . .
+RUN npm i --save
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
